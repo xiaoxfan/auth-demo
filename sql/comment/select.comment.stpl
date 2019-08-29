@@ -1,0 +1,21 @@
+select id,comment,create_time,post_id,update_time,user_id
+from comment where 1=1
+{% if id!="" %}
+and id=?id
+{% endif %}
+{% if comment!="" %}
+and comment like concat('%',?comment,'%')
+{% endif %}
+{% if create_time!="" %}
+and create_time=?create_time
+{% endif %}
+{% if post_id!="" %}
+and post_id=?post_id
+{% endif %}
+{% if update_time!="" %}
+and update_time=?update_time
+{% endif %}
+{% if user_id!="" %}
+and user_id=?user_id
+{% endif %}
+

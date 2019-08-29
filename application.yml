@@ -1,0 +1,9 @@
+server:
+  port: 7777
+jwt:
+  signingString: 1qaz@WSX
+database:
+  driver: mysql
+  username: root
+  password: 123456
+  url: tcp(localhost:3306)/pet?charset=utf8
